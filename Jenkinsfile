@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers{
-  pollscm(* * * * *)
+  pollscm(H/1 * * * *)
   }
   stages {
     stage('error') {
