@@ -3,18 +3,14 @@ pipeline {
   stages {
     stage('error') {
       parallel {
-        stage('error') {
+        stage('test') {
           steps {
             sh 'echo "First step for pipeline"'
           }
         }
-        stage('') {
+        stage('nv') {
           steps {
-            node(label: 'N1_Arjun') {
-              sleep 20
-              build(job: 'J1', quietPeriod: 1, wait: true)
-            }
-
+            sh 'echo "2nd step for pipeline"'
           }
         }
       }
